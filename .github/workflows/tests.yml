@@ -1,10 +1,10 @@
-name: Tests
+name: Build and Test
 
 on: push
 
 jobs:
-  build:
-    name: Unit Testing
+  run-msbuild-vstest:
+    name: Run MSBuild and VSTest
 
     runs-on: windows-latest
 
@@ -19,7 +19,7 @@ jobs:
         uses: microsoft/setup-msbuild@v1
 
       - name: Setup VSTest
-        uses: microsoft/setup-vstest@v4
+        uses: darenm/setup-vstest@v1
 
       - name: Restore NuGet Packages
         run: nuget restore src/MollieApi.Net.sln
@@ -27,6 +27,6 @@ jobs:
       - name: Build Solution
         run: msbuild src/MollieApi.Net.sln /p:Configuration=Release
 
-      - name: Run Unit Tests
+      - name: Run VSTest
         run: vstest.console src/MollieApi.Tests/bin/Release/MollieApi.Tests.dll
 
