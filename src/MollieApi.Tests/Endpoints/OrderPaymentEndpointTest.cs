@@ -44,7 +44,7 @@ namespace MollieApi.Tests.Endpoints
                 Metadata = null,
                 OrderId = "ord_stTC2WHAuS",
                 IsCancelable = true,
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 ProfileId = "pfl_URR55HPMGx",
                 SequenceType = "oneoff",
                 SettlementAmount = new Amount
@@ -116,7 +116,7 @@ namespace MollieApi.Tests.Endpoints
             Assert.IsNull(payment.Metadata);
             Assert.AreEqual("ord_stTC2WHAuS", payment.OrderId);
             Assert.IsTrue(payment.IsCancelable);
-            Assert.AreEqual(new CultureInfo("nl_NL"), payment.Locale);
+            Assert.AreEqual(new CultureInfo("nl-NL"), payment.Locale);
             Assert.AreEqual("pfl_URR55HPMGx", payment.ProfileId);
             Assert.AreEqual(SequenceType.SEQUENCETYPE_ONEOFF, payment.SequenceType);
             Assert.AreEqual(new Amount("698.00", "EUR"), payment.SettlementAmount);

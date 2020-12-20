@@ -136,7 +136,7 @@ namespace MollieApi.Tests.Endpoints
                     Email = "luke@skywalker.com"
                 },
                 OrderNumber = orderNumber,
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 Method = "klarnapaylater",
                 IsCancelable = true,
                 RedirectUrl = new Uri("https://example.org/redirect"),

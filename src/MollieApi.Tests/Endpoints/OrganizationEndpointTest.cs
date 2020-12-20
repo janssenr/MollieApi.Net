@@ -27,7 +27,7 @@ namespace MollieApi.Tests.Endpoints
                 Id = "org_12345678",
                 Name = "Mollie B.V.",
                 Email = "info@mollie.com",
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 Address = new Address
                 {
                     StreetAndNumber = "Keizersgracht 313",
@@ -79,7 +79,7 @@ namespace MollieApi.Tests.Endpoints
                 Id = "org_12345678",
                 Name = "Mollie B.V.",
                 Email = "info@mollie.com",
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 Address = new Address
                 {
                     StreetAndNumber = "Keizersgracht 313",
@@ -123,7 +123,7 @@ namespace MollieApi.Tests.Endpoints
             Assert.AreEqual("org_12345678", organization.Id);
             Assert.AreEqual("Mollie B.V.", organization.Name);
             Assert.AreEqual("info@mollie.com", organization.Email);
-            Assert.AreEqual(new CultureInfo("nl_NL"), organization.Locale);
+            Assert.AreEqual(new CultureInfo("nl-NL"), organization.Locale);
 
             Assert.AreEqual(new Address
             {

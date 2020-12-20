@@ -54,7 +54,7 @@ namespace MollieApi.Tests.Endpoints
                 },
                 ConsumerDateOfBirth = new DateTime(1958, 1, 31),
                 OrderNumber = "1337",
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 Method = "klarnapaylater",
                 RedirectUrl = new Uri("https://example.org/redirect"),
                 WebhookUrl = new Uri("https://example.org/webhook"),
@@ -166,7 +166,7 @@ namespace MollieApi.Tests.Endpoints
                     { "description", "Lego cars" },
                 },
                 ConsumerDateOfBirth = new DateTime(1958, 1, 31),
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 OrderNumber = "1337",
                 RedirectUrl = new Uri("https://example.org/redirect"),
                 WebhookUrl = new Uri("https://example.org/webhook"),
@@ -281,7 +281,7 @@ namespace MollieApi.Tests.Endpoints
                 CreatedAt = new DateTime(2018, 8, 2, 9, 29, 56),
                 ExpiresAt = new DateTime(2018, 8, 30, 9, 29, 56),
                 Mode = "live",
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 BillingAddress = new OrderAddress
                 {
                     OrganizationName = "Mollie B.V.",
@@ -396,7 +396,7 @@ namespace MollieApi.Tests.Endpoints
                         Metadata = null,
                         Status = "open",
                         IsCancelable = false,
-                        Locale = new CultureInfo("nl_NL"),
+                        Locale = new CultureInfo("nl-NL"),
                         ProfileId = "pfl_URR55HPMGx",
                         OrderId = "ord_kEn1PlbGa",
                         SequenceType = "oneoff",
@@ -466,7 +466,7 @@ namespace MollieApi.Tests.Endpoints
             Assert.IsNull(payment.Metadata);
             Assert.AreEqual("open", payment.Status);
             Assert.IsFalse(payment.IsCancelable);
-            Assert.AreEqual(new CultureInfo("nl_NL"), payment.Locale);
+            Assert.AreEqual(new CultureInfo("nl-NL"), payment.Locale);
             Assert.AreEqual("pfl_URR55HPMGx", payment.ProfileId);
             Assert.AreEqual("ord_kEn1PlbGa", payment.OrderId);
             Assert.AreEqual(new Uri("https://example.org/redirect"), payment.RedirectUrl);
@@ -801,7 +801,7 @@ namespace MollieApi.Tests.Endpoints
             Assert.AreEqual(shippingAddress, order.ShippingAddress);
 
             Assert.AreEqual(orderNumber, order.OrderNumber);
-            Assert.AreEqual(new CultureInfo("nl_NL"), order.Locale);
+            Assert.AreEqual(new CultureInfo("nl-NL"), order.Locale);
 
             Assert.AreEqual(new Uri("https://example.org/redirect"), order.RedirectUrl);
             Assert.AreEqual(new Uri("https://example.org/webhook"), order.WebhookUrl);
