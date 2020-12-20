@@ -7,19 +7,19 @@ jobs:
     name: Unit Testing
     runs-on: windows-latest
     steps:
-		- name: Checkout Code
-			uses: actions/checkout
+      - name: Checkout Code
+        uses: actions/checkout
 
-		- name: Setup MSBuild
-			uses: microsoft/setup-msbuild
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild
 
-		- name: Setup Nuget.exe
-			uses: NuGet/setup-nuget
+      - name: Setup Nuget.exe
+        uses: NuGet/setup-nuget
 
-		- name: Restore NuGet Packages
-			run: nuget restore src/MollieApi.Net.sln
+      - name: Restore NuGet Packages
+        run: nuget restore src/MollieApi.Net.sln
 
-		- name: Build App
-			run: msbuild src/MollieApi.Net.sln /p:Configuration=Release
+      - name: Build App
+        run: msbuild src/MollieApi.Net.sln /p:Configuration=Release
 
 
