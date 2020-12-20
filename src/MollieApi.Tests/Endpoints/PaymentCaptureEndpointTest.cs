@@ -195,7 +195,7 @@ namespace MollieApi.Tests.Endpoints
                     { "consumerAccount", "NL17RABO0213698412" },
                     { "consumerBic", "TESTNL99" },
                 },
-                Locale = new CultureInfo("nl_NL"),
+                Locale = new CultureInfo("nl-NL"),
                 CountryCode = "NL",
                 ProfileId = "pfl_2A1gacu42V",
                 SequenceType = "oneoff",
