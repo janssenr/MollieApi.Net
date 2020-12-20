@@ -170,7 +170,7 @@ If you wish to learn more about the API, please visit the [Mollie Developer Port
 
 ## Want to help make the API client even better? ##
 
-Want to help make the API client even better? Create a [pull requests](https://github.com/janssenr/MollieApi.Net/pulls).
+Want to help make the API client even better? Create a [pull request](https://github.com/janssenr/MollieApi.Net/pulls).
 
 ## License ##
 [MIT (Massachusetts Institute of Technology) License](https://licenses.nuget.org/MIT).
