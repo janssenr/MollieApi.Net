@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MollieApi.Net", "MollieApi.Net\MollieApi.Net.csproj", "{B5178545-BBE4-45BF-8DFD-60F42DFB8FF6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MollieApi.ConsoleApp", "MollieApi.ConsoleApp\MollieApi.ConsoleApp.csproj", "{86098E37-0831-41A5-A2D3-6A6F0DA4236A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MollieApi.Net", "MollieApi.Net\MollieApi.Net.csproj", "{B5178545-BBE4-45BF-8DFD-60F42DFB8FF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MollieApi.Tests", "MollieApi.Tests\MollieApi.Tests.csproj", "{000EAF45-241E-43F5-80B3-55A1D55A7C9B}"
 EndProject
@@ -19,10 +17,6 @@ Global
 		{B5178545-BBE4-45BF-8DFD-60F42DFB8FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5178545-BBE4-45BF-8DFD-60F42DFB8FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5178545-BBE4-45BF-8DFD-60F42DFB8FF6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86098E37-0831-41A5-A2D3-6A6F0DA4236A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86098E37-0831-41A5-A2D3-6A6F0DA4236A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86098E37-0831-41A5-A2D3-6A6F0DA4236A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86098E37-0831-41A5-A2D3-6A6F0DA4236A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{000EAF45-241E-43F5-80B3-55A1D55A7C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{000EAF45-241E-43F5-80B3-55A1D55A7C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{000EAF45-241E-43F5-80B3-55A1D55A7C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
