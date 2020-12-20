@@ -11,10 +11,10 @@ jobs:
         uses: actions/checkout@main
 
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1.0.2
+        uses: microsoft/setup-msbuild@latest
 
       - name: Setup Nuget.exe
-        uses: NuGet/setup-nuget
+        uses: nuget/setup-nuget@latest
 
       - name: Restore NuGet Packages
         run: nuget restore src/MollieApi.Net.sln
