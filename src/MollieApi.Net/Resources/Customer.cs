@@ -20,7 +20,19 @@ namespace MollieApi.Net.Resources
         public string Email { get; set; }
 
         [DataMember(Name = "locale", EmitDefaultValue = false, IsRequired = false)]
-        public CultureInfo Locale { get; set; }
+        private string _locale;
+
+        public CultureInfo Locale
+        {
+            get
+            {
+                return _locale != null ? new CultureInfo(_locale) : null;
+            }
+            set
+            {
+                _locale = value != null ? value.Name.Replace("-", "_") : null;
+            }
+        }
 
         [DataMember(Name = "metadata", EmitDefaultValue = false, IsRequired = false)]
         public string Metadata { get; set; }

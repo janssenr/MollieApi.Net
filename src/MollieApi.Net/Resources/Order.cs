@@ -79,7 +79,19 @@ namespace MollieApi.Net.Resources
         /// The locale used for this order.
         /// </summary>
         [DataMember(Name = "locale", EmitDefaultValue = false, IsRequired = false)]
-        public CultureInfo Locale { get; set; }
+        private string _locale;
+
+        public CultureInfo Locale
+        {
+            get
+            {
+                return _locale != null ? new CultureInfo(_locale) : null;
+            }
+            set
+            {
+                _locale = value != null ? value.Name.Replace("-", "_") : null;
+            }
+        }
 
         /// <summary>
         /// During creation of the order you can set custom metadata that is stored with the order, and given back whenever you retrieve that order.

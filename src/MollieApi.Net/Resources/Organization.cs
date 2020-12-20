@@ -22,7 +22,19 @@ namespace MollieApi.Net.Resources
         /// The preferred locale of the merchant which has been set in Mollie Dashboard.
         /// </summary>
         [DataMember(Name = "locale", EmitDefaultValue = false, IsRequired = false)]
-        public CultureInfo Locale { get; set; }
+        private string _locale;
+
+        public CultureInfo Locale
+        {
+            get
+            {
+                return _locale != null ? new CultureInfo(_locale) : null;
+            }
+            set
+            {
+                _locale = value != null ? value.Name.Replace("-", "_") : null;
+            }
+        }
 
         /// <summary>
         /// The address of the organization.

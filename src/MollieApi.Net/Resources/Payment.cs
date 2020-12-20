@@ -155,11 +155,11 @@ namespace MollieApi.Net.Resources
         {
             get
             {
-                return new CultureInfo(_locale);
+                return _locale != null ? new CultureInfo(_locale) : null;
             }
             set
             {
-                _locale = value.Name.Replace("-", "_");
+                _locale = value != null ? value.Name.Replace("-", "_") : null;
             }
         }
 
