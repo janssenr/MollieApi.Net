@@ -12,11 +12,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@main
 
+      - name: Setup Nuget
+        uses: nuget/setup-nuget@v1
+
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
 
-      - name: Setup Nuget
-        uses: nuget/setup-nuget@v1
+      - name: Setup VSTest
+        uses: microsoft/setup-vstest@v4
 
       - name: Restore NuGet Packages
         run: nuget restore src/MollieApi.Net.sln
@@ -25,5 +28,5 @@ jobs:
         run: msbuild src/MollieApi.Net.sln /p:Configuration=Release
 
       - name: Run Unit Tests
-        run: vstest.console.exe src/MollieApi.Tests/bin/Release/MollieApi.Tests.dll
+        run: vstest.console src/MollieApi.Tests/bin/Release/MollieApi.Tests.dll
 
