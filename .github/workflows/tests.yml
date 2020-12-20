@@ -3,9 +3,11 @@ name: Tests
 on: push
 
 jobs:
-  tests:
+  build:
     name: Unit Testing
+
     runs-on: windows-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@main
@@ -19,7 +21,9 @@ jobs:
       - name: Restore NuGet Packages
         run: nuget restore src/MollieApi.Net.sln
 
-      - name: Build App
+      - name: Build Solution
         run: msbuild src/MollieApi.Net.sln /p:Configuration=Release
 
+      - name: Run Unit Tests
+        run: vstest.console.exe src/MollieApi.Tests/bin/Release/MollieApi.Tests.dll
 
