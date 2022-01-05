@@ -6,16 +6,16 @@
 		<TargetFramework>net451</TargetFramework>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>MollieApi</PackageId>
-		<Version>2.0.0</Version>
+		<Version>2.0.1</Version>
 		<Authors>Rob Janssen</Authors>
 		<Company />
 		<Description>A C#/.net wrapper for the Mollie API version 2</Description>
-		<Copyright>Copyright Rob Janssen 2020</Copyright>
+		<Copyright>Copyright Rob Janssen 2021</Copyright>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/janssenr/MollieApi.Net</PackageProjectUrl>
 		<PackageIcon>favicon-1.png</PackageIcon>
 		<PackageTags>mollie api rest data</PackageTags>
-		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackageReleaseNotes>Fix error -&gt; The request was aborted: Could not create SSL/TLS secure channel.</PackageReleaseNotes>
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net451'">
@@ -24,7 +24,7 @@
 	<ItemGroup>
 		<None Include="..\..\nuget\Package\images\favicon-1.png">
 			<Pack>True</Pack>
-			<PackagePath/>
+			<PackagePath />
 		</None>
 	</ItemGroup>
 </Project>

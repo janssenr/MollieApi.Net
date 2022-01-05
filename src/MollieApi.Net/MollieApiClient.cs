@@ -222,6 +222,8 @@ namespace MollieApi.Net
             _versionString = new List<string>();
             AddVersionString("MollieApi.Net/" + CLIENT_VERSION);
             AddVersionString("ASP.NET/" + Environment.Version.ToString());
+
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
 
         /// <summary>
